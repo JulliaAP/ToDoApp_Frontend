@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// Importa o recat e o componente 
+import React from 'react';
+import MeuComponente from './components/MeuComponente';
 
+// Usa o componente importado em outro componente (App) e passa "mundo" como propriedade
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprenda React
-        </a>
-      </header>
+    <div>
+      <h1>Meu Primeiro App React</h1>
+      <MeuComponente nome="Mundo" />
     </div>
   );
 }
 
+//Exporta o componente App
 export default App;
