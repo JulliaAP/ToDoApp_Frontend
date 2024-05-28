@@ -1,16 +1,22 @@
-// Importa o recat e o componente 
-import React from 'react';
-import MeuComponente from './components/MeuComponente';
+import ToDo from "./components/ToDo";
 
-// Usa o componente importado em outro componente (App) e passa "mundo" como propriedade
 function App() {
   return (
-    <div>
-      <h1>Meu Primeiro App React</h1>
-      <MeuComponente nome="Mundo" />
+    <div className="App">
+      <div className="container">
+        <h1>TO-DO App</h1>
+
+        <div className="top">
+          <input type="text" placeholder="Adicione uma tarefa..." />
+
+          <div className="add">Adicionar</div>
+        </div>
+
+        <div className="list">
+          <ToDo text="Hi" />
+        </div>
+      </div>
     </div>
   );
 }
-
-//Exporta o componente App
 export default App;
