@@ -3,8 +3,8 @@ import ToDo from "./components/ToDo";
 import { addToDo, deleteToDo, getAllToDo, updateToDo } from "./utils/HandleApi";
 
 function App() {
-  const [toDo, setToDo] = useState([]);
-  const [text, setText] = useState("");
+  const [toDo, setToDo] = useState([]); // atualizar a lista de tarefas 
+  const [text, setText] = useState(""); //limpar a caixa de texto
   const [isUpdating, setIsUpdating] = useState(false);
   const [toDoId, setToDoId] = useState("");
 

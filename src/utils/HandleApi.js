@@ -1,6 +1,9 @@
+// Faz conexão com o backend 
 import axios from "axios";
 
-const baseURL = "http://localhost:5000";
+// Url de onde está hospedado o backend 
+//const baseURL = "http://localhost:5000";
+const baseURL = "https://todoapp-backend-q7xx.onrender.com";
 
 const getAllToDo = (setToDo) => {
   axios.get(`${baseURL}`).then(({ data }) => {
