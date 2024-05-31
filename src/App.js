@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ToDo from "./components/ToDo";
 import { addToDo, deleteToDo, getAllToDo, updateToDo } from "./utils/HandleApi";
+import Topo from "./components/Header";
+import Rodape from "./components/Footer";
 
 function App() {
   const [toDo, setToDo] = useState([]); // atualizar a lista de tarefas 
@@ -20,7 +22,9 @@ function App() {
 
   return (
     <div className="App">
+      <Topo/>
       <div className="container">
+        
         <h1>Task-a-Tudo</h1>
         <div className="top">
           <input
@@ -52,7 +56,9 @@ function App() {
           />
         ))}
       </div>
+      
     </div>
+    <Rodape/>
   </div>
 );
 }
