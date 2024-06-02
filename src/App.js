@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import ToDo from "./components/ToDo";
 import { addToDo, deleteToDo, getAllToDo, updateToDo } from "./utils/HandleApi";
+
 import Topo from "./components/Header";
 import Rodape from "./components/Footer";
+import './components/ToDo.css';
+
 
 function App() {
   const [toDo, setToDo] = useState([]); // atualizar a lista de tarefas 
   const [text, setText] = useState(""); //limpar a caixa de texto
   const [isUpdating, setIsUpdating] = useState(false);
   const [toDoId, setToDoId] = useState("");
+
+
 
   useEffect(() => {
     getAllToDo(setToDo);
@@ -25,7 +30,7 @@ function App() {
       <Topo/>
       <div className="container">
         
-        <h1>Task-a-Tudo</h1>
+        <h1 className="Titulo">Task-a-Tudo</h1>
         <div className="top">
           <input
             type="text"
@@ -34,7 +39,7 @@ function App() {
             onChange={(e) => setText(e.target.value)}
           />
           <div
-            className="add"
+            className={isUpdating ? "button update" : "button add"}
             onClick={
               isUpdating
                 ? () =>
