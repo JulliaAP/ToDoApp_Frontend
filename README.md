@@ -1,70 +1,124 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# task-a-tudo 
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Uma breve descrição sobre o nosso projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Nossa missão foi desenvolver o nosso aplicativo, que demos o nome de Task-a-Tudo, um gerenciador de tarefas eficiente e intuitivo. Queremos oferecer aos usuários uma ferramenta que vá além de simplesmente organizar suas atividades diárias, mas que também simplifique suas vidas. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Desenvolvimento Front-End
 
-### `npm test`
+No desenvolvimento do frontend do Task-a-Tudo, usamos o React, uma biblioteca JavaScript popular e poderosa para criar interfaces de usuário. Com o React, conseguimos fazer componentes reutilizáveis e gerenciar o estado da aplicação de forma eficiente, proporcionando uma experiência de usuário bem fluida e interativa.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#JavaScript e React - 
 
-### `npm run build`
+- Criamos componentes reutilizáveis com React, facilitando a manutenção e escalabilidade.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Usamos Hooks e Context API para gerenciar o estado e compartilhar dados de forma eficiente.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Implementamos React Router para navegação contínua entre páginas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Desenvolvimento Back-End
 
-### `npm run eject`
+- No desenvolvimento do backend do Task-a-Tudo, usamos Node.js com Express para criar uma API robusta e eficiente, garantindo uma comunicação fluida entre o frontend e o banco de dados.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#APIs RESTful -
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Desenvolvemos uma API RESTful que permite realizar todas as operações CRUD (Create, Read, Update, Delete) necessárias para gerenciar as tarefas. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Isso inclui endpoints para criar novas tarefas, ler tarefas existentes, atualizar tarefas e deletar tarefas.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Cada endpoint foi projetado para seguir os princípios REST, o que torna a API intuitiva e fácil de usar.
 
-## Learn More
+#Validação de Dados -
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Colocamos em prática formas de garantir que as informações que chegam ao servidor estejam corretas e seguras antes de serem usadas ou guardadas no banco de dados. Essa é uma medida importante para evitar problemas futuros e manter a integridade dos dados.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#Manutenção e Escalabilidade - 
 
-### Code Splitting
+- Node.js foi escolhido por sua capacidade de lidar com múltiplas requisições simultaneamente, o que é essencial para um aplicativo que precisa escalar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Nosso código é modular e bem organizado, facilitando a adição de novas funcionalidades e a manutenção do sistema existente.
 
-### Analyzing the Bundle Size
+#Integração com o Frontend - 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Garantimos que todas as respostas da API sejam rápidas e contenham as informações necessárias para que o frontend funcione de maneira eficiente e sem interrupções.
+ 
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Banco de Dados
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Optamos por usar Optamos por utilizar o MongoDB como nosso sistema de gerenciamento de banco de dados. 
 
-### Deployment
+- O MongoDB é um banco de dados NoSQL altamente escalável e flexível, que armazena os dados em formato JSON-like (BSON) e é ideal para aplicações que lidam com grandes volumes de dados e precisam de flexibilidade na modelagem.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Nos permite trabalhar com dados não estruturados ou semiestruturados, o que é útil para um aplicativo como o Task-a-Tudo, onde as informações das tarefas podem variar de acordo com as necessidades dos usuários.
 
-### `npm run build` fails to minify
+- Usamos o Mongoose, uma biblioteca de modelagem de dados para MongoDB em Node.js, para facilitar a interação com o banco de dados e definir esquemas de dados consistentes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Consultas NoSQL -
+
+- Para adicionar, atualizar, remover e buscar dados, usamos consultas especiais que funcionam bem com bancos de dados NoSQL. Essas consultas são um pouco diferentes das tradicionais, mas nos permitem fazer as mesmas coisas.
+
+#Segurança - 
+
+- Embora o MongoDB não tenha problemas comuns de segurança, como SQL Injection, ainda tomamos medidas para manter nossos dados seguros. 
+## Engenharia de Software
+
+Na gestão do nosso código, contamos com o GitHub para acompanhar as diferentes versões do nosso software, o que nos permite trabalhar em equipe de maneira eficiente. 
+
+Isso significa que podemos colaborar em diferentes partes do projeto ao mesmo tempo, sem nos preocuparmos em sobrescrever o trabalho uns dos outros.
+
+- Para garantir que nosso software funcione corretamente, implementamos testes automatizados. Isso significa que podemos identificar e corrigir problemas rapidamente, o que é essencial para manter a qualidade do nosso código e a satisfação dos usuários.
+## Autores
+
+- [@Jullia Azevedo](https://github.com/JulliaAP)
+- [@Vitória Lorenna](https://github.com/Lor3nn)
+- [@Vinícius Regis](https://github.com/vrzim5)
+- [@Emilly Menezes](https://github.com/emmenezes02)
+
+## Documentação da API
+
+#### Retorna todas as tarefas
+
+http
+  GET /
+
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `` | `` |  |
+
+#### Salva uma tarefa
+
+http
+  POST /save
+
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| text      | string | *Obrigatório*. O título da tarefa que você quer |
+
+#### Atualiza uma tarefa
+
+http
+  POST /update
+
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| _id      | string | *Obrigatório*. O ID da tarefa que você quer |
+| text      | string | *Obrigatório*. O título da tarefa que você quer |
+
+#### Apaga uma tarefa
+
+http
+  POST /delete
+
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| _id      | string | *Obrigatório*. O ID da tarefa que você quer |
+
