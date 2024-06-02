@@ -28,7 +28,7 @@ function App() {
 
   if (loggedIn) {
     return (
-      <div className="App">
+      <div className="App"> 
         <Topo/>
         <div className="container">
           <h1 className="Titulo">Task-a-Tudo</h1>
@@ -40,7 +40,7 @@ function App() {
               onChange={(e) => setText(e.target.value)}
             />
             <div
-              className={isUpdating ? "button update" : "button add"}
+              className="add"
               onClick={
                 isUpdating
                   ? () =>

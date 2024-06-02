@@ -1,6 +1,7 @@
 import React from "react";
 import { AreaHeader } from "./styled_header";
 
+
 function Topo() {
     return (
         <AreaHeader>
