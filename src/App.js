@@ -72,7 +72,7 @@ function App() {
                 text={item.text}
                 data={item.data}
                 prazo={item.prazo}
-                isCompleted={item.isCompleted}
+                isCompleted={item.completo}
                 updateMode={() => updateMode(item._id, item.text)}
                 deleteToDo={() => deleteToDo(item._id, setToDo)}
                 handleCompletion={() => handleCompletion(item._id)}
