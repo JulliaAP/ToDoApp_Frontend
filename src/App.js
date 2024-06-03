@@ -30,10 +30,6 @@ function App() {
     setPrazo(prazo);
   };
 
-  const handleCompletion = (taskId) => {
-    updateTaskCompletion(taskId);
-  };
-
   if (loggedIn) {
     return (
       <div className="App"> 
