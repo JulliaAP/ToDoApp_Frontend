@@ -5,6 +5,7 @@ import Topo from "./components/Header";
 import Rodape from "./components/Footer";
 import './components/ToDo.css';
 import LoginForm from './LoginForm';
+import { updateTaskCompletion } from "./utils/HandleApi"; 
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
   const [text, setText] = useState(""); //limpar a caixa de texto
   const [isUpdating, setIsUpdating] = useState(false);
   const [toDoId, setToDoId] = useState("");
+  const [prazo, setPrazo] = useState("");
+  const [prazoHora, setPrazoHora] = useState("");
 
 
 
@@ -20,10 +23,15 @@ function App() {
     getAllToDo(setToDo);
   }, []);
 
-  const updateMode = (_id, text) => {
+  const updateMode = (_id, text, prazo) => {
     setIsUpdating(true);
     setText(text);
     setToDoId(_id);
+    setPrazo(prazo);
+  };
+
+  const handleCompletion = (taskId) => {
+    updateTaskCompletion(taskId);
   };
 
   if (loggedIn) {
@@ -39,13 +47,22 @@ function App() {
               value={text}
               onChange={(e) => setText(e.target.value)}
             />
+            <input
+              type="date"
+              value={prazo}
+              onChange={(e) => setPrazo(e.target.value)}
+            />
+            <input
+              type="time"
+              value={prazoHora}
+              onChange={(e) => setPrazoHora(e.target.value)}
+            />
             <div
               className="add"
               onClick={
                 isUpdating
-                  ? () =>
-                      updateToDo(toDoId, text, setToDo, setText, setIsUpdating)
-                  : () => addToDo(text, setText, setToDo)
+                ? () => updateToDo(toDoId, text, prazo, prazoHora, setToDo, setText, setPrazo, setPrazoHora, setIsUpdating)
+                : () => addToDo(text, prazo, prazoHora, setText, setPrazo, setPrazoHora, setToDo)
               }
             >
               {isUpdating ? "Atualizar" : "Adicionar"}
@@ -57,8 +74,12 @@ function App() {
               <ToDo
                 key={item.id}
                 text={item.text}
+                data={item.data}
+                prazo={item.prazo}
+                isCompleted={item.isCompleted}
                 updateMode={() => updateMode(item._id, item.text)}
                 deleteToDo={() => deleteToDo(item._id, setToDo)}
+                handleCompletion={() => handleCompletion(item._id)}
               />
             ))}
           </div>
