@@ -12,32 +12,34 @@ const getAllToDo = (setToDo) => {
   });
 };
 
-const addToDo = (text, setText, setToDo) => {
-    axios
-    .post(`${baseURL}/save`, { text })
+const addToDo = (text, prazo, prazoHora, setText, setPrazo, setPrazoHora, setToDo) => {
+  const prazoCompleto = `${prazo}T${prazoHora}`;
+  axios
+    .post(`${baseURL}/save`, { text, prazo: prazoCompleto })
     .then((data) => {
       console.log(data);
       setText("");
+      setPrazo("");
+      setPrazoHora("");
       getAllToDo(setToDo);
     })
-    .catch((err) => {
-      console.log(err);
-    });
+    .catch((err) => console.log(err));
 };
 
-const updateToDo = (toDoId, text, setToDo, setText, setIsUpdating) => {
-    axios
-      .post(`${baseURL}/update`, { _id: toDoId, text })
-      .then((data) => {
-        console.log(data);
-        setText("");
-        setIsUpdating(false);
-        getAllToDo(setToDo);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+const updateToDo = (toDoId, text, prazo, prazoHora, setToDo, setText, setPrazo, setPrazoHora, setIsUpdating) => {
+  const prazoCompleto = `${prazo}T${prazoHora}`;
+  axios
+    .post(`${baseURL}/update`, { _id: toDoId, text, prazo: prazoCompleto })
+    .then((data) => {
+      console.log(data);
+      setText("");
+      setPrazo("");
+      setPrazoHora("");
+      setIsUpdating(false);
+      getAllToDo(setToDo);
+    })
+    .catch((err) => console.log(err));
+};
 
 
   const deleteToDo = (_id, setToDo) => {
