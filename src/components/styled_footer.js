@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const AreaRodape = styled.div`
-    background-color: #CDCDCD ;
+    background-color: #bde1ea ;
     text-align: center;
     padding: 20px;
     font-size: 14px;
