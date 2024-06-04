@@ -7,7 +7,7 @@ function Topo() {
         <AreaHeader>
             <div className="container">
                 <div className="logo">
-                    <img src="../../Logonew.png" />
+                    <img src="../../Logo.png" />
                 </div>
                 <nav>
                     <ul>

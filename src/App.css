@@ -26,13 +26,13 @@
     padding: 10px;
     border: none;
     border-radius: 3px;
-    background-color: #800080;
+    background-color: #205b69;
     color: #fff;
     cursor: pointer;
   }
   
   .login-container button:hover {
-    background-color: #630263;
+    background-color: #153b44;
   }
   
   /* Estilos para o título do formulário de login */
@@ -40,5 +40,4 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  
   
