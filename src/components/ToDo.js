@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import './ToDo.css';
 import { LuCalendarClock, LuCalendarCheck, LuCalendarX, LuCalendarOff, LuCalendar } from "react-icons/lu";
+
 
 const ToDo = ({ text, data, prazo, updateMode, deleteToDo, isCompleted }) => {
   const formatDate = (date) => {

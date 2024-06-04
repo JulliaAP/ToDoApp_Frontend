@@ -5,7 +5,6 @@ import Topo from "./components/Header";
 import Rodape from "./components/Footer";
 import './components/ToDo.css';
 import LoginForm from './LoginForm';
-import { updateTaskCompletion } from "./utils/HandleApi"; 
 
 
 function App() {
@@ -28,6 +27,11 @@ function App() {
     setText(text);
     setToDoId(_id);
     setPrazo(prazo);
+  };
+
+  const handleCompletion = (taskId) => {
+    // Chamada para atualizar o status da tarefa
+    updateToDo(taskId, { completo: true }, setToDo);
   };
 
   if (loggedIn) {
