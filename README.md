@@ -106,18 +106,18 @@ Se quiser contribuir com este projeto, siga estas etapas:
 - Faça push para a branch (git push origin feature/nova-feature).
 - Crie um novo Pull Request.
 
-## Deployment com Render
+## Deployment com OnRender
 
-Para fazer o deployment usando o serviço Render, siga estas etapas:
+Para fazer o deployment usando o serviço OnRender, siga estas etapas:
 
-- Crie uma conta no Render se ainda não tiver uma.
+- Crie uma conta no OnRender se ainda não tiver uma.
 - Na dashboard do OnRender, clique em "New" para criar um novo site.
 - Selecione a opção de integração com GitHub e autorize o acesso ao seu repositório.
 - Escolha o repositório que deseja implantar.
 - Especifique as configurações de build e deploy conforme necessário (por exemplo, comandos de build: npm run build para o frontend).
 - Clique em "Deploy" para iniciar o processo de deployment.
-- Quando concluído, seu aplicativo estará disponível em um URL fornecido pelo Render.
-Acesse o Render aqui: [https://render.com](https://render.com)
+- Quando concluído, seu aplicativo estará disponível em um URL fornecido pelo OnRender.
+Acesse o OnRender aqui: [https://render.com](https://render.com)
 
 
 ## Documentação da API
